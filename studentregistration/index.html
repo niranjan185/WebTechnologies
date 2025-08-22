@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+
+</head>
+<style>
+    h1{
+        text-align: center;
+        color: white;
+        background-color: navy;
+    }
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+    form{
+        text-align:center;
+        margin-left: 40%;
+        /* border: 2px solid black; */
+        width: 25%;
+        height: 500px;
+    }
+    div{
+         /* text-align:center; */
+        margin-left: 30%;
+        border: 2px solid black;
+        background-color: goldenrod;
+        color: darkred;
+        width: 40%;
+        height: 550px;
+        margin-top: 10px;
+    }
+    label{
+        margin-top: 5px;
+    }
+</style>
+<body>
+    <h1>Student Registration Form</h1>
+  <div>
+    <form>
+        <label for="roll no">roll no :</label>
+        <input type="text" name="roll no" id="roll no" placeholder="enter roll no" required><br><br>
+        <label for="first name">first name :</label>
+        <input type="text" name="first name" id="first name" placeholder="enter first name" required><br><br>
+        <label for="last name">last name :</label>
+        <input type="text" name="last name" id="last name" placeholder="enter last name"><br><br>
+        <label for="dob">date of birth :</label>
+        <input type="date" name="dob" id="dob" ><br><br>
+        <label for="phn">phn :</label>
+        <input type="text" name="phn" id="phn" ><br><br>
+        <label for="email">email :</label>
+        <input type="email" name="email" id="email" placeholder="enter email" required><br><br>
+        <label for="gender">gender :</label>
+        <label for="gender">male</label>
+        <input type="radio" name="gender" id="male">
+        <label for="gender">female</label>
+        <input type="radio" name="gender" id="female"><br><br>
+         <label for="dept">department :</label>
+        <label for="dept">data science</label>
+        <input type="radio" name="dept" id="dept">
+        <label for="dept">it</label>
+        <input type="radio" name="dept" id="dept">
+        <label for="dept">cyber security</label>
+        <input type="radio" name="dept" id="dept"><br><br>
+    <select id="select course" name="course" required>
+        <option value="">--Please choose a course--</option>
+        <option value="Machine">Machine learning</option>
+        <option value="data">data analytics</option>
+        <option value="cloud">cloud computing</option>
+   </select>
+   <button>submit</button>
+        
+       
+       
+  
+  
+    </form>
+    </div>
+
+</body>
+</html>

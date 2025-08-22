@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(160deg, #10142b, #1a1f3d);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+
+        h1 {
+            margin: 10px 0;
+            font-size: 28px;
+            color: #fff;
+        }
+
+        #btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0 20px;
+            font-weight: bold;
+        }
+
+        #search {
+            width: 75%;
+            text-align: left;
+            margin-bottom: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        #search-input {
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            background: #2b3160;
+            color: #fff;
+        }
+
+        table {
+            width: 95%;
+            border-collapse: collapse;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #1f2547;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        th {
+            padding: 15px;
+            text-align: center;
+            background-color: #2b3160;
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 15px;
+            text-align: center;
+            font-size: 15px;
+            color: #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #262c55;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #1f2547;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        #b {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        #c {
+            color: #f1c40f;
+            font-weight: bold;
+        }
+        #d{
+            color:#3498db;
+        }
+
+        #Edit {
+            padding: 6px 12px;
+            font-size: 14px;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        #del {
+            padding: 6px 12px;
+            font-size: 14px;
+            background-color: #e74c3c;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #i {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Product - Management</h1>
+    <table>
+
+        <tr>
+            <th colspan="6" id="i">List of Products</th>
+        </tr>
+        <tr>
+            <th><button id="btn">Create Product</button></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>
+                <section id="search">
+                    <input type="text" id="search-input" placeholder="Search">
+                </section>
+            </th>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>IMAGE</th>
+            <th>TITLE</th>
+            <th>SUBTITLE</th>
+            <th>PRICE($)</th>
+            <th>RATING</th>
+            <th>ACTIONS</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><img src="image.png" alt="Image"></td>
+            <td id="d">Trainers</td>
+            <td>Trainers in White</td>
+            <td id="b">76</td>
+            <td id="c">4.6 ⭐</td>
+            <td>
+                <button id="Edit">Edit</button>
+                <button id="del">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><img src="Screenshot 2025-08-22 071356.png" alt="Image"></td>
+            <td id="d">Boots</td>
+            <td>Trainers in Blue</td>
+            <td id="b">45</td>
+            <td id="c">4.6 ⭐</td>
+            <td>
+                <button id="Edit">Edit</button>
+                <button id="del">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><img src="Screenshot 2025-08-22 071648.png" alt="Image"></td>
+            <td id="d">Flat sandals</td>
+            <td>Trainers in White</td>
+            <td id="b">55</td>
+            <td id="c">4.6 ⭐</td>
+            <td>
+                <button id="Edit">Edit</button>
+                <button id="del">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><img src="Screenshot 2025-08-22 071808.png" alt="Image"></td>
+            <td id="d">Trainers</td>
+            <td>Trainers in White</td>
+            <td id="b">76</td>
+            <td id="c">4.6 ⭐</td>
+            <td>
+                <button id="Edit">Edit</button>
+                <button id="del">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><img src="Screenshot 2025-08-22 071855.png" alt="Image"></td>
+            <td id="d">Boots</td>
+            <td>Trainers in Blue</td>
+            <td id="b">45</td>
+            <td id="c"> 4.6 ⭐</td>
+            <td>
+                <button id="Edit">Edit</button>
+                <button id="del">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><img src="Screenshot 2025-08-22 071935.png" alt="Image"></td>
+            <td  id="d">Flat sandals</td>
+            <td>Trainers in White</td>
+            <td id="b">55</td>
+            <td id="c">4.6 ⭐</td>
+            <td>
+                <button id="Edit">Edit</button>
+                <button id="del">Delete</button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

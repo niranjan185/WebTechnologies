@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+</head>
+<style>
+    body{
+        background-color: rgb(157, 211, 238);
+    }
+    h1{
+        background-color: rgb(242, 251, 254);
+        color: black;
+        text-align : center;
+        margin-top: 7%;
+    }
+    div{
+        width: 30%;
+        height:500px;
+        border: 2px solid brown;
+        margin-left: 35%;
+        margin-top: 4%;
+        border-radius: 10%;
+        background-color: rgb(234, 243, 247);
+        align-items: center;
+        justify-content:center ;
+    }
+    form{
+        font-size: 18px;
+        display: block;
+        margin-top: 20%;
+        text-align: center;
+    }
+    input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+}
+    user name{
+        margin-top: 40%;
+        text-align:center;
+        border-radius: 20%;
+    }
+    label{
+        font-size: 20px;
+        display: inline-block;
+        width: 150px;
+    }
+</style>
+<body>
+    <h1>Login Form</h1>
+   <div>
+       <form>
+            <label for="user name"> user name :</label><br>
+            <input type="txt" id="name" name="user name" placeholder="enter username" required></input><br>
+            <label for="name">name :</label><br>
+            <input type="txt" id="name" name="name" placeholder="enter full name" required></input><br>
+            <label for="email">email :</label><br>
+            <input type="email" id="email" name="email" placeholder="enter email" required></input><br>
+            <label for="phn">email :</label><br>
+            <input type="tel" id="phn" name="phn" placeholder="enter phn number" required></input><br>
+            <label for="address">Address :</label><br>
+            <input type="txt" id="Address" name="Address" placeholder="enter Address" required></input><br>
+            <input type="submit" id="submit" name="submit" ></input><br>
+            
+
+
+       </form>
+   </div>
+</body>
+</html>

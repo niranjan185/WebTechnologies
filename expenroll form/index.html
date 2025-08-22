@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <style>
+        h1{
+            background-color: #93a2a4;
+            color:white;
+            text-align: center;
+        }
+        body{
+            background-color: #f8fcfc;
+        }
+        form{
+            width: 30%;
+            height: 500px;
+            border:2px solid black;
+            text-align: justify;
+            margin-top: auto;
+            padding-top: 50px;
+            margin-left: 35%;
+            background-color: #a49393;
+            border-radius: 10%;
+            padding-left: 7%;
+
+        }
+        
+        input[type ="submit"]{
+             padding: auto;
+             background-color: cornflowerblue;
+             color: black;
+             border-radius: 10%;
+             width: auto;
+             height: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Enrollment Form</h1>
+    <form>
+        <label for="name">student's name :</label>
+        <input type="text" name="name" id="name" required><br><br>
+        <label for="rollno">student's roll no :</label>
+        <input type="text" name="rollno" id="rollno" required><br><br>
+        <label for="email">student's mail :</label>
+        <input type="email" name="email" id="email" required><br><br>
+        <h3>course selection</h3>
+        
+        <input type="checkbox" name="coursename" id="coursename" required>
+        <label for="coursename">web technologies</label><br>
+        
+        <input type="checkbox" name="coursename" id="coursename" required>
+        <label for="coursename">Data base management system</label><br>
+        
+        <input type="checkbox" name="coursename" id="coursename" required>
+        <label for="coursename">machine learning</label><br>
+        
+        <input type="checkbox" name="coursename" id="coursename" required>
+        <label for="coursename">data mining</label><br>
+        
+        <input type="checkbox" name="coursename" id="coursename" required>
+        <label for="coursename">DSA with java</label><br>
+        <h3>mode of study</h3>
+        
+        <input type="radio" name="modeofstudy" id="modeofstudy" required>
+        <label for="modeofstudy">online</label><br>
+        
+        <input type="radio" name="modeofstudy" id="modeofstudy" required>
+        <label for="modeofstudy">offline</label><br>
+        
+        <input type="radio" name="modeofstudy" id="modeofstudy" required>
+        <label for="modeofstudy">hybrid</label><br><br>
+        <label for="submit"></label>
+        <input type="submit" name="submit" id="submit" required><br>
+    </form>
+</body>
+</html>
