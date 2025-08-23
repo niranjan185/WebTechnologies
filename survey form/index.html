@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+</head>
+<style>
+    h1{
+        background-color: cadetblue;
+        color: azure;
+        text-align: center;
+    }
+    form{
+        text-align: left;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 20px;
+        border: 2px solid rgb(29, 133, 193);
+    }
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        
+    }
+    th{
+        border: 2px solid blanchedalmond;
+        padding: 10px;
+    }
+
+    td{
+        border: 2px solid blanchedalmond;
+        text-align: center;
+    }
+    #tt{
+        text-align: left;
+    }
+</style>
+<body>
+    <h1> Election Survey Form</h1>
+    <form>
+        <img src="image.png">
+        <h4>Are you registered for vote?</h4>
+        <input type="radio" id="regforvote" name="regforvote">
+        <label for="regforvote">yes</label>
+        <input type="radio" id="regforvote" name="regforvote">
+        <label for="regforvote">No</label>
+
+        <h4>Do yot think the government is currently on the right track to help the people of this state?</h4>
+        <input type="radio" id="agree" name="agree">
+        <label for="agree">yes</label>
+        <input type="radio" id="agree" name="agree">
+        <label for="agree">No</label>
+
+        <h4>which party do you most often side with?</h4>
+        <input type="radio" id="party" name="party">
+        <label for="party">ysrcp</label>
+        <input type="radio" id="party" name="party">
+        <label for="party">Tdp</label>
+        <input type="radio" id="party" name="party">
+        <label for="party">jana sena</label>
+        <input type="radio" id="party" name="party">
+        <label for="party">other</label>
+
+        <h4>How do you evaluate a political candidate? check all that apply</h4>
+        <input type="checkbox" id="eval" name="eval">
+        <label for="eval">Television and internet news</label><br>
+        <input type="checkbox" id="eval" name="eval">
+        <label for="eval">Watching debates and live appearances</label><br>
+        <input type="checkbox" id="eval" name="eval">
+        <label for="eval">political summary sources</label><br>
+        <input type="checkbox" id="eval" name="eval">
+        <label for="eval">personal research</label><br>
+        <input type="checkbox" id="eval" name="eval">
+        <label for="eval">other</label><br>
+
+        <h4>please answer with your level of agreement : </h4>
+        <table>
+            <tr>
+                <th></th>
+                <th>strongly<br> disagree</th>
+                <th>Disagree</th>
+                <th>neutral</th>
+                <th>agree</th>
+                <th>strongly agree</th>
+            </tr>
+
+            <tr>
+                <td id="tt">all people should be allowed the opportunity to live here</td>
+                <td><input type="radio" id="1" name="1"></td>
+                <td><input type="radio" id="1" name="1"></td>
+                <td><input type="radio" id="1" name="1"></td>
+                <td><input type="radio" id="1" name="1"></td>
+                <td><input type="radio" id="1" name="1"></td>
+            </tr>
+
+            <tr>
+                <td id="tt">Government representatives should be represent the cultutral demographics of their constituents</td>
+                <td><input type="radio" id="2" name="2"></td>
+                <td><input type="radio" id="2" name="2"></td>
+                <td><input type="radio" id="2" name="2"></td>
+                <td><input type="radio" id="2" name="2"></td>
+                <td><input type="radio" id="2" name="2"></td>
+            </tr>
+            <tr>
+                <td id="tt">Higher incomes should be taxed more than low incomes</td>
+                <td><input type="radio" id="3" name="3"></td>
+                <td><input type="radio" id="3" name="3"></td>
+                <td><input type="radio" id="3" name="3"></td>
+                <td><input type="radio" id="3" name="3"></td>
+                <td><input type="radio" id="3" name="3"></td>
+            </tr>
+            <tr>
+                <td id="tt">Crime conviction sentences are too high for non-violent crimes</td>
+                <td><input type="radio" id="4" name="4"></td>
+                <td><input type="radio" id="4" name="4"></td>
+                <td><input type="radio" id="4" name="4"></td>
+                <td><input type="radio" id="4" name="4"></td>
+                <td><input type="radio" id="4" name="4"></td>
+            </tr>
+            
+        </table>
+    </form>
+</body>
+</html>
