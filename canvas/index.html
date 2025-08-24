@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        background-color: darkgrey;
+        color: black;
+    }
+    #mycanvas{
+        height: auto;
+        width: 70%;
+        border: 2px solid green;
+        padding: 50px;
+        margin-left: 10%;
+    }
+</style>
+<body>
+    <h1>Shapes Using Canvas</h1>
+    <canvas id="mycanvas"></canvas>
+    <script>
+        var canvas = document.getElementById("mycanvas");
+        var c = canvas.getContext("2d");
+
+
+        // rectangle//
+        c.fillStyle="red";
+        c.fillRect(20,20,100,40);
+
+        //square//
+        c.fillStyle="blue";
+        c.fillRect(200,50,50,50);
+
+        //circle//
+        c.arc(150, 30, 20, 0, 2 * Math.PI);
+        c.fillStyle = "green";
+        c.fill();
+        c.strokeStyle = "black";
+        c.stroke();
+
+        //text//
+        c.font ="30px arial";
+        c.fillStyle="pink"
+        c.fillText("canvas objects",50,150);
+        //line//
+        c.beginPath();
+        c.moveTo(10,30);
+        c.lineTo(100,100);
+        c.strokeStyle="purple";
+        c.lineWidth="3";
+        c.stroke();
+    </script>
+</body>
+</html>
