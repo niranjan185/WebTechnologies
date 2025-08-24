@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback form</title>
+<style>
+    body{
+        background-image: url('image.png');
+        background-position: center;
+        background-size: cover;
+    }
+    h1{
+        background-color: olive;
+        color: white;
+        text-align: center;
+    }
+    h2{
+        background-color: olive;
+        color: rgb(5, 1, 1);
+        text-align: center;
+    }
+    form{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        /* border: 2px solid black; */
+        padding: 50px;
+        background: rgba(211, 208, 206, 0.6); 
+    }
+    table{
+        width: 80%;
+        height: 300px;
+        border-collapse: collapse;
+        border-radius: 10px;
+        
+    }
+    td{
+        text-align: center;
+        border: 2px solid brown;
+        padding: 30px;
+    }
+    th{
+       border: 2px solid brown;
+        padding: 30px; 
+    }
+    #x{
+       text-align: left;
+    }
+    #button{
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        margin-top: 200px;
+        margin-left: 40%;
+        background-color: green;
+        color: white;
+    }
+</style>
+
+</head>
+<body >
+    
+    <h1>Train journey feedback form</h1>
+
+    <form>
+        <h2>feedback form</h2>
+        <h4>Did you feel safe during your journey?</h4>
+        <input type="radio" id="1" name="1">
+        <label for="1">yes</label>
+        <input type="radio" id="1" name="1">
+        <label for="1">No</label>
+        <input type="radio" id="1" name="1">
+        <label for="1">I don't know</label>
+
+        <h4>Did you find any authorised person on the train?</h4>
+        <input type="radio" id="2" name="2">
+        <label for="1">yes</label>
+        <input type="radio" id="2" name="2">
+        <label for="1">No</label>
+
+        <h4>other feedback :</h4>
+        <table>
+            <tr>
+                <th></th>
+                <th>Very Good</th>
+                <th>Good</th>
+                <th>Fair</th>
+                <th>poor</th>
+                <th>Very poor</th>
+            </tr>
+            <tr>
+                <td id="x">comfort and cleanliness of train compartments</td>
+                <td><input type="radio" id="3" name="3"></td>
+                <td><input type="radio" id="3" name="3"></td>
+                <td><input type="radio" id="3" name="3"></td>
+                <td><input type="radio" id="3" name="3"></td>
+                <td><input type="radio" id="3" name="3"></td>
+            </tr>
+            <tr>
+                <td id="x">punctuality and adherence to the schedule</td>
+                <td><input type="radio" id="4" name="4"></td>
+                <td><input type="radio" id="4" name="4"></td>
+                <td><input type="radio" id="4" name="4"></td>
+                <td><input type="radio" id="4" name="4"></td>
+                <td><input type="radio" id="4" name="4"></td>
+            </tr>
+
+            <tr>
+                <td id="x">staff frendliness and professionalism</td>
+                <td><input type="radio" id="5" name="5"></td>
+                <td><input type="radio" id="5" name="5"></td>
+                <td><input type="radio" id="5" name="5"></td>
+                <td><input type="radio" id="5" name="5"></td>
+                <td><input type="radio" id="5" name="5"></td>
+            </tr>
+        </table>
+        <h4>Overall journey experience</h4>
+        <label for="rating"></label>
+        <select>
+            <option>--select rating--</option>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+        </select><br>
+
+        <button id="button"><b>submit form</b></button>
+    </form>
+</body>
+</html>
