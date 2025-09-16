@@ -3,51 +3,187 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Dashboard</title>
+  <title>Weather</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: linear-gradient(to right, #74ebd5, #ACB6E5);
-      color: #333;
+      background-color: rgb(7, 1, 28);
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
     }
-    .dashboard {
-      margin-top: 50px;
+    .container {
+      max-width: 1200px;
+      background: #36314a;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
       padding: 20px;
-      border-radius: 15px;
-      background: rgba(255, 255, 255, 0.85);
-      display: inline-block;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
     }
-    input, button {
-      padding: 10px;
-      margin: 10px;
-      border-radius: 8px;
+    .top {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+    .icon, .globe, .bright, input {
+      background-color: rgb(7, 1, 28);
+      padding: 8px 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);  
+      color: white;   
+      font-size: large;   
+    }
+    input {
+      flex: 1;
+      font-size: large;
       border: none;
-    }
-    button {
-      cursor: pointer;
-      background: #007bff;
+      outline: none;
       color: white;
     }
-    img {
-      width: 80px;
+    .support {
+      background-color: white;
+      padding: 8px 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);  
+      color: black;   
+      font-size: large;         
+    }
+    .head {
+      color: white;
+      font-size: 2em;
+      margin: 10px 0 20px 0;
+    }
+    .wrapper {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .table {
+      background-color: rgb(7, 1, 28);
+      flex: 0 0 250px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      padding: 20px;
+      text-align: center;
+    }
+    .table p {
+      color: #fff;
+      margin: 15px 0;
+    }
+    .table p:nth-child(1) {
+      font-size: 5em;
+    }
+    .table p:nth-child(2) {
+      font-size: 1.5em;
+    }
+    .table p:nth-child(3) {
+      font-size: 2em;
+    }
+    .right {
+      flex: 1;
+      min-width: 300px;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .box {
+      background-color: rgb(7, 1, 28);
+      color: #fff;
+      font-size: 1.1em;
+      text-align: center;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1 1 calc(33.33% - 15px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .box span:first-child {
+      font-size: 2em;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .box span:last-child {
+      font-size: 1.4em;
+      margin-top: 5px;
+      display: block;
+    }
+    .forecast-wrapper {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+    .forecast {
+      background-color: rgb(7, 1, 28);
+      color: #fff;
+      font-size: 1em;
+      text-align: center;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .forecast span {
+      display: block;
+      font-size: 1.3em;
+      margin-top: 5px;
+    }
+    @media (max-width: 768px) {
+      .wrapper {
+        flex-direction: column;
+      }
+      .table {
+        flex: 1 1 100%;
+      }
+      .box {
+        flex: 1 1 calc(50% - 15px);
+      }
+    }
+    @media (max-width: 480px) {
+      .box {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>🌍 Real-Time Weather Dashboard</h1>
-  <div class="dashboard">
-    <input type="text" id="cityInput" placeholder="Enter city name">
-    <button onclick="getWeatherByCity()">Search</button>
-    <button onclick="getWeatherByLocation()">📍 Use My Location</button>
-
-    <h2 id="city">City: -</h2>
-    <p id="temperature">Temperature: -</p>
-    <p id="condition">Condition: -</p>
-    <img id="icon" src="" alt="Weather Icon" />
+  <div class="container">
+    <div class="top">
+      <span class="icon">☁ weather</span>
+      <input type="search" placeholder="location">
+    </div>
+    <div class="head">Today Overview</div>
+    <div class="wrapper">
+      <div class="table">
+        <p>🌤</p>
+        <p>28.6°C</p>
+        <p>Clear</p>
+        <p style="font-size: 1.2em;">🏁 Istanbul</p>
+        <p style="font-size: 1em;">📆 28 August Monday</p>
+      </div>
+      <div class="right">
+        <div class="grid">
+          <div class="box"><span>💨</span>Wind Speed<span>28 km/h</span></div>
+          <div class="box"><span>💧</span>Humidity<span>48%</span></div>
+          <div class="box"><span>🕗</span>Pressure<span>1008 hPa</span></div>
+          <div class="box"><span>🌊</span>Visibility<span>10 km</span></div>
+          <div class="box"><span>🌅</span>Sunrise<span>06:26</span></div>
+          <div class="box"><span>🔆</span>Sunset<span>19:44</span></div>
+        </div>
+        <div class="forecast-wrapper">
+          <div class="forecast">Monday 18:00<span>28.6°C</span></div>
+          <div class="forecast">Monday 21:00<span>27.3°C</span></div>
+          <div class="forecast">Tuesday 00:00<span>25.5°C</span></div>
+          <div class="forecast">Tuesday 03:00<span>23.3°C</span></div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
